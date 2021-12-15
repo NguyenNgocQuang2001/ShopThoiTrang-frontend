@@ -1,0 +1,28 @@
+{
+  "name": "ShopThoiTrang-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/client.js",
+    "watch": "node-sass --watch src/resources/scss/ --output src/public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NguyenNgocQuang2001/ShopThoiTrang-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NguyenNgocQuang2001/ShopThoiTrang-frontend/issues"
+  },
+  "homepage": "https://github.com/NguyenNgocQuang2001/ShopThoiTrang-frontend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.1",
+    "node-sass": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}

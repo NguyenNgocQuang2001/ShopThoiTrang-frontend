@@ -1,0 +1,202 @@
+@import 'variables';
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+
+    div#container {
+        margin: 0px;
+        padding: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-image: url('/images/bglogin3.png');
+        background-position: top;
+        animation: mymove 5s infinite;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+
+
+        div#login, div#register {
+
+            border: 2px solid rgba(123, 66, 12, 0);
+            height: 500px;
+            width: 450px;
+            position: relative;
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+
+            form {
+
+                width: 100%;
+                height: 50px;
+                position: relative;
+
+                input {
+
+                    outline: none;
+                    border: none;
+                    border-bottom: 2px solid rgba(123, 66, 12, 1);
+                    width: $sizeflex;
+                    background-color: unset;
+                    font-size: 20px;
+                    color: rgb(0, 0, 0);
+                    margin-left: 25px;
+                }
+
+                label {
+
+                    position: absolute;
+                    left: 0px;
+                    margin-left: 25px;
+                    font-size: 20px;
+                    color: rgb(0, 0, 0);
+                    transform-origin: 0px 0px;
+                    transition: transform 0.5s ease-in-out;
+                    cursor: text;
+                }
+
+                input:focus + label, input:not(:placeholder-shown) + label {
+
+                    transform: translateY(-1em) scale(0.8);
+                }
+                
+            }
+
+            div.title {
+
+                margin-left: 25px;
+                text-align: center;
+                font-size: 60px;
+                width: $sizeflex;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                cursor: default;
+            }
+
+            div.suggest {
+
+                cursor: default;
+                margin-left: 25px;
+                font-size: 18px;
+                width: $sizeflex;
+                color: rgb(0, 0, 0);
+                margin-bottom: 30px;
+                margin-top: 15px;
+                font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+
+            div#forgetpassword {
+
+                color: rgb(121, 0, 0);
+                text-align: end;
+                width: $sizeflex;
+                margin-left: auto;
+                margin-right: auto;
+                cursor: default;
+            }
+
+            div#forgetpassword:hover {
+                
+                color: rgb(0, 17, 255);
+            }
+        }
+        div#login {
+            
+            margin-left: calc(50vw - 510px);
+            //margin-right: 60px;
+            
+        }
+
+        div#register {
+
+            margin-right: calc(50vw - 510px);
+            margin-left: 27px;
+        }
+
+        div#register:hover, div#login:hover {
+
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            border: 2px solid rgb(0, 0, 0);
+
+            div.buttonoke {
+
+                button {
+
+                    background-color: rgb(225, 255, 89);
+                    border: 2px solid rgb(0, 0, 0);
+                }
+            }
+        }
+
+        div#vertical {
+
+            background-color: rgb(72, 255, 0);
+            height: 500px;
+            width: 6px;
+            position: relative;
+            top: calc(50vh - 250px);
+            margin-left: 27px;
+        }
+
+        div#backhome {
+            position: relative;
+            left: 0px;
+            font-size: 50px;
+            width : 60px;
+
+            a {
+                position: relative;
+                text-decoration: none;
+                left: 20px;
+                top: 10px;
+            }
+
+            a:hover {
+                color: rgb(238, 255, 0);
+            }
+        }
+
+        div#notification {
+
+            position: absolute;
+            color: rgb(255, 0, 0);
+            left: 25px;
+            bottom: 80px;
+            text-align: center;
+            width: $sizeflex;
+        }
+
+        div.buttonoke {
+
+            width: $sizeflex;
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            left: 25px;
+
+            button {
+
+                border-radius: 20px;
+                border: 2px solid rgba(0, 0, 0, 0);
+                width: 300px;
+                height: 50px;
+                font-size: 30px;
+                background-color: rgba(123, 66, 12, 0);
+                color: rgb(44, 44, 21);
+            }
+
+            button:hover {
+
+                color: rgb(76, 0, 255);
+            }
+        }
+    }
+}
+
+@keyframes mymove {
+  50% {background-position: center;}
+}

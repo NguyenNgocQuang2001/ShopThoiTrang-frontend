@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/alluse/jquery-3.6.0.min.js"></script>
+    <script src="./js/alluse/cookie.js"></script>
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div id="container">
+        <div id="backhome">
+            <a href="./home">QStore</a>
+        </div>
+        <div id="login">
+            <div class="title">
+                Đăng Nhập
+            </div>
+            <div class="suggest">
+                <b>Nếu bạn đã có tài khoản, hãy đăng nhập để tích lũy điểm thành viên và nhận được những ưu đãi tốt hơn!</b>
+            </div>
+            <form>
+                <input type="text" placeholder=" " id="login-account">
+                <label for="login-account">Email, SĐT hoặc Tên Người Dùng</label>
+            </form>
+            <form>
+                <input type="password" placeholder=" " id="login-password">
+                <label for="login-password">Mật Khẩu</label>
+            </form>
+            <div id="forgetpassword">
+                Quên mật khẩu ?
+            </div>
+            <div id="notification">
+                Tài khoản không chính xác !!!
+            </div>
+            <div class="buttonoke">
+                <button onclick="login()">Đăng Nhập</button>
+            </div>
+        </div>
+        <div id="vertical"></div>
+        <div id="register">
+            <div class="title">
+                Đăng Ký
+            </div>
+            <div class="suggest">
+                <b>Hãy đăng ký ngay để tích lũy điểm thành viên và nhận được những ưu đãi tốt hơn !</b>
+            </div>
+            <form>
+                <input type="text" placeholder=" " id="register-name">
+                <label for="register-name">Họ và Tên</label>
+            </form>
+            <form>
+                <input type="text" placeholder=" " id="register-email">
+                <label for="register-email">Email</label>
+            </form>
+            <form>
+                <input type="text" placeholder=" " id="register-phone">
+                <label for="register-phone">Số điện thoại</label>
+            </form>
+            <form>
+                <input type="password" placeholder=" " id="register-password">
+                <label for="register-password">Mật Khẩu</label>
+            </form>
+            <form>
+                <input type="password" placeholder=" " id="register-confirmpassword">
+                <label for="register-confirmpassword">Nhập Lại Mật Khẩu</label>
+            </form>
+            <div class="buttonoke">
+                <button>Đăng Ký</button>
+            </div>
+        </div>
+    </div>
+    <script src="./api/account/getToken.js"></script>
+    <script src="./js/loginandlogout/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh; }
+  body div#container {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/images/bglogin3.png");
+    background-position: top;
+    animation: mymove 5s infinite;
+    background-size: cover;
+    display: flex;
+    flex-direction: row; }
+    body div#container div#login, body div#container div#register {
+      border: 2px solid rgba(123, 66, 12, 0);
+      height: 500px;
+      width: 450px;
+      position: relative;
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column; }
+      body div#container div#login form, body div#container div#register form {
+        width: 100%;
+        height: 50px;
+        position: relative; }
+        body div#container div#login form input, body div#container div#register form input {
+          outline: none;
+          border: none;
+          border-bottom: 2px solid #7b420c;
+          width: 400px;
+          background-color: unset;
+          font-size: 20px;
+          color: black;
+          margin-left: 25px; }
+        body div#container div#login form label, body div#container div#register form label {
+          position: absolute;
+          left: 0px;
+          margin-left: 25px;
+          font-size: 20px;
+          color: black;
+          transform-origin: 0px 0px;
+          transition: transform 0.5s ease-in-out;
+          cursor: text; }
+        body div#container div#login form input:focus + label, body div#container div#login form input:not(:placeholder-shown) + label, body div#container div#register form input:focus + label, body div#container div#register form input:not(:placeholder-shown) + label {
+          transform: translateY(-1em) scale(0.8); }
+      body div#container div#login div.title, body div#container div#register div.title {
+        margin-left: 25px;
+        text-align: center;
+        font-size: 60px;
+        width: 400px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        cursor: default; }
+      body div#container div#login div.suggest, body div#container div#register div.suggest {
+        cursor: default;
+        margin-left: 25px;
+        font-size: 18px;
+        width: 400px;
+        color: black;
+        margin-bottom: 30px;
+        margin-top: 15px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+      body div#container div#login div#forgetpassword, body div#container div#register div#forgetpassword {
+        color: #790000;
+        text-align: end;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: default; }
+      body div#container div#login div#forgetpassword:hover, body div#container div#register div#forgetpassword:hover {
+        color: #0011ff; }
+    body div#container div#login {
+      margin-left: calc(50vw - 510px); }
+    body div#container div#register {
+      margin-right: calc(50vw - 510px);
+      margin-left: 27px; }
+    body div#container div#register:hover, body div#container div#login:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      border: 2px solid black; }
+      body div#container div#register:hover div.buttonoke button, body div#container div#login:hover div.buttonoke button {
+        background-color: #e1ff59;
+        border: 2px solid black; }
+    body div#container div#vertical {
+      background-color: #48ff00;
+      height: 500px;
+      width: 6px;
+      position: relative;
+      top: calc(50vh - 250px);
+      margin-left: 27px; }
+    body div#container div#backhome {
+      position: relative;
+      left: 0px;
+      font-size: 50px;
+      width: 60px; }
+      body div#container div#backhome a {
+        position: relative;
+        text-decoration: none;
+        left: 20px;
+        top: 10px; }
+      body div#container div#backhome a:hover {
+        color: #eeff00; }
+    body div#container div#notification {
+      position: absolute;
+      color: red;
+      left: 25px;
+      bottom: 80px;
+      text-align: center;
+      width: 400px; }
+    body div#container div.buttonoke {
+      width: 400px;
+      text-align: center;
+      position: absolute;
+      bottom: 10px;
+      left: 25px; }
+      body div#container div.buttonoke button {
+        border-radius: 20px;
+        border: 2px solid rgba(0, 0, 0, 0);
+        width: 300px;
+        height: 50px;
+        font-size: 30px;
+        background-color: rgba(123, 66, 12, 0);
+        color: #2c2c15; }
+      body div#container div.buttonoke button:hover {
+        color: #4c00ff; }
+
+@keyframes mymove {
+  50% {
+    background-position: center; } }
