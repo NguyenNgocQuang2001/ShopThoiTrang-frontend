@@ -14,18 +14,5 @@ function clickbtn() {
     .catch(err => {
         console.log('server loi :((');
     });
-
-    /*$.ajax({
-
-        url : 'http://localhost:9090/home',
-        type : 'GET'
-    })
-    .then(rs => {
-        console.log(rs);
-    })
-    .catch(err => {
-        console.log('server loi :((');
-    });*/
-
     
 }

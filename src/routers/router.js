@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', (req, res, next) => {
 
-    res.json("client run oke :))");
+    res.redirect('./home');
 });
 
 router.get('/home', (req, res, next) => {
@@ -15,12 +15,7 @@ router.get('/home', (req, res, next) => {
 
 router.get('/login', (req, res, next) => {
 
-    res.sendFile(path.join(__dirname, '../resources/views/loginandlogout/login.html'));
-});
-
-router.get('/logout', (req, res, next) => {
-
-    res.sendFile(path.join(__dirname, '../resources/views/loginandlogout/logout.html'));
+    res.sendFile(path.join(__dirname, '../resources/views/login.html'));
 });
 
 
