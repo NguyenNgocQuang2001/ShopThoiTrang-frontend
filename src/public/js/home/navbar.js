@@ -3,7 +3,8 @@ var open = false;
 function products() {
 
     $('#myAccount').css("display", "none");
-    $('#product').css("display", "");
+    $('#logout').css("display", "none");
+    $('#product').css("display", "flex");
     $('.product').slideToggle(1000);
     if (open === false) {
 
@@ -25,5 +26,5 @@ function products() {
 function myInformation() {
 
     $('#product').css("display", "none");
-    $('#myAccount').css("display", "flex");
+    $('#logout').css("display", "block");
 }

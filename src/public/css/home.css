@@ -53,13 +53,36 @@ body {
       body div#container div#header-body div#show {
         width: calc(100% - 200px);
         height: 100%;
-        background-color: rgba(189, 197, 184, 0.5); }
+        background-color: white; }
         body div#container div#header-body div#show div#myAccount {
           display: none;
           width: 100%;
           height: 100%; }
+        body div#container div#header-body div#show div#logout {
+          width: 100%;
+          height: 100%;
+          text-align: center; }
+          body div#container div#header-body div#show div#logout a {
+            text-decoration: none;
+            cursor: pointer;
+            color: #3a4688;
+            font-size: 20px; }
+          body div#container div#header-body div#show div#logout a:hover {
+            color: #eeff00; }
+        body div#container div#header-body div#show div#product {
+          display: none; }
     body div#container div#footers {
       width: 100%;
-      height: 200px;
+      height: 150px;
       border: none;
-      background-color: #3741d1; }
+      background-color: black;
+      color: white;
+      display: flex;
+      flex-direction: row; }
+      body div#container div#footers div.footers-items {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer; }
+        body div#container div#footers div.footers-items li:hover {
+          color: #eeff00; }
