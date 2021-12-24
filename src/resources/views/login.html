@@ -32,7 +32,7 @@
             <div id="forgetpassword">
                 Quên mật khẩu ?
             </div>
-            <div id="notification">
+            <div id="notification-login">
                 Tài khoản không chính xác !!!
             </div>
             <div class="buttonoke">
@@ -67,12 +67,16 @@
                 <input type="password" placeholder=" " id="register-confirmpassword">
                 <label for="register-confirmpassword">Nhập Lại Mật Khẩu</label>
             </form>
+            <div id="notification-signup">
+                okeekoekeo
+            </div>
             <div class="buttonoke">
-                <button>Đăng Ký</button>
+                <button onclick="signup()">Đăng Ký</button>
             </div>
         </div>
     </div>
     <script src="./api/account/getToken.js"></script>
+    <script src="./api/account/submitSignUp.js"></script>
     <script src="./js/login/login.js"></script>
 </body>
 </html>

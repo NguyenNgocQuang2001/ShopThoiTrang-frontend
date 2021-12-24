@@ -1,4 +1,4 @@
-const getapi = () => {
+const getToken = () => {
 
     const acc = {
 
@@ -7,7 +7,7 @@ const getapi = () => {
     };
 
     //console.log($('#login-password').val());
-    fetch('http://localhost:9090/account', {
+    var token = fetch('http://localhost:9090/account', {
 
         method : 'POST',
         headers: {
@@ -18,18 +18,22 @@ const getapi = () => {
     })
     .then(data => {
 
-        setCookie('token', data, 1);
+        //setCookie('token', data, 1);
         return data.json();
     })
     .then(data => {
-        console.log(data);
-        //return data;
+        //console.log(data);
+        //setCookie('token', data.token, 1);
+        return data;
+        //alert(data.token);
     })
     .catch(err => {
         
-        console.log('err');
+        return "loi server !!!";
         //throw err;
     });
 
-    //return data;
+    //var token = await data;
+
+    return token;
 }

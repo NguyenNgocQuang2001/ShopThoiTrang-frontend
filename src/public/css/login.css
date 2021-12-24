@@ -102,11 +102,20 @@ body {
         top: 5px; }
       body div#container div#backhome a:hover {
         color: #eeff00; }
-    body div#container div#notification {
+    body div#container div#notification-login {
+      display: none;
       position: absolute;
       color: red;
       left: 25px;
       bottom: 80px;
+      text-align: center;
+      width: 400px; }
+    body div#container div#notification-signup {
+      display: none;
+      position: absolute;
+      color: red;
+      left: 25px;
+      bottom: 65px;
       text-align: center;
       width: 400px; }
     body div#container div.buttonoke {

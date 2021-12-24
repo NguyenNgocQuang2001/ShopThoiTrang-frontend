@@ -23,8 +23,28 @@ function products() {
     }
 }
 
-function myInformation() {
+async function myInformation() {
 
-    $('#product').css("display", "none");
-    $('#logout').css("display", "block");
+    try {
+        var access = await accessToken();
+        console.log(access.authen);
+        if (access && access.authen == true) {
+            $('#product').css("display", "none");
+            $('#logout').css("display", "none");
+            $('#myAccount').css("display", "block");
+        } else {
+            $('#product').css("display", "none");
+            $('#logout').css("display", "block");
+            $('#myAccount').css("display", "none");
+        }
+    }
+    catch(err) {
+        console.log('loi server !!!');
+    }
+}
+
+function buttonlogout() {
+
+    setCookie('token', "__", 1);
+    window.location.href = "./home";
 }
