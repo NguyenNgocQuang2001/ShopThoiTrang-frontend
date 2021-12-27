@@ -1,0 +1,12 @@
+div#show {
+
+    width: calc(100% - 200px);
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+
+    @import 'myAccount';
+
+    @import 'logout';
+
+    @import 'products';
+}

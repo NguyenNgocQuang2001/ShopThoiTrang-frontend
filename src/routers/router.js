@@ -5,17 +5,27 @@ const router = express.Router();
 
 router.get('/', (req, res, next) => {
 
-    res.redirect('./home');
+    res.redirect('./profile');
 });
 
-router.get('/home', (req, res, next) => {
+router.get('/product', (req, res, next) => {
 
-    res.sendFile(path.join(__dirname, '../resources/views/home.html'));
+    res.sendFile(path.join(__dirname, '../resources/views/product.html'));
 });
 
 router.get('/login', (req, res, next) => {
 
     res.sendFile(path.join(__dirname, '../resources/views/login.html'));
+});
+
+router.get('/logout', (req, res, next) => {
+
+    res.sendFile(path.join(__dirname, '../resources/views/logout.html'));
+});
+
+router.get('/profile', (req, res, next) => {
+
+    res.sendFile(path.join(__dirname, '../resources/views/profile.html'));
 });
 
 

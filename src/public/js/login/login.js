@@ -67,7 +67,7 @@ async function login() {
         setCookie('token', token.token, 1);
         if (typeof(token) != "string") {
 
-            window.location.replace("./home");
+            window.location.replace("./product");
         } else {
             $('#notification-login').css("display", "block");
             //$('#login-account').val('');
@@ -84,6 +84,9 @@ async function signup() {
     try {
         var ans = await submitSignUp();
         console.log(ans);
+        if (ans == 'Tạo tài khoản thành công') {
+            setvalSignUp();
+        }
         $('#notification-signup').text(ans);
         $('#notification-signup').css("display", "block");
     } catch(err) {

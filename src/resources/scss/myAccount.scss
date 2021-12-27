@@ -1,0 +1,30 @@
+div#myAccount {
+
+    width: 100%;
+    height: 100%;
+    display: none;
+
+    div#head-account {
+
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 5%;
+        div.my-account {
+
+            width: 25%;
+            height: 100%;
+            text-align: center;
+            font-size: 25px;
+            border: 2px solid black;
+            background-color: rgb(203, 255, 151);
+            cursor: default;
+        }
+
+        div.my-account:hover {
+
+            color: rgb(41, 71, 243);
+        }
+
+    }
+}

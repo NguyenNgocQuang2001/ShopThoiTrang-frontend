@@ -2,24 +2,25 @@ var open = false;
 
 function products() {
 
-    $('#myAccount').css("display", "none");
-    $('#logout').css("display", "none");
-    $('#product').css("display", "flex");
-    $('.product').slideToggle(1000);
-    if (open === false) {
+    if (window.location.href.includes('product') == true) {
+        $('.product').slideToggle(1000);
+        if (open === false) {
 
-        $('#arrow-products').css({
-            "transform" : "rotate(180deg)",
-            "transition-duration" : "1s"
-        });
-        open = true;
+            $('#arrow-products').css({
+                "transform" : "rotate(180deg)",
+                "transition-duration" : "1s"
+            });
+            open = true;
+        } else {
+
+            $('#arrow-products').css({
+                "transform" : "rotate(0deg)",
+                "transition-duration" : "1s"
+            });
+            open = false;
+        }
     } else {
-
-        $('#arrow-products').css({
-            "transform" : "rotate(0deg)",
-            "transition-duration" : "1s"
-        });
-        open = false;
+        window.location.href = './product';
     }
 }
 
@@ -29,13 +30,9 @@ async function myInformation() {
         var access = await accessToken();
         console.log(access.authen);
         if (access && access.authen == true) {
-            $('#product').css("display", "none");
-            $('#logout').css("display", "none");
-            $('#myAccount').css("display", "block");
+            window.location.href = './profile';
         } else {
-            $('#product').css("display", "none");
-            $('#logout').css("display", "block");
-            $('#myAccount').css("display", "none");
+            window.location.href = './logout';
         }
     }
     catch(err) {
@@ -46,5 +43,5 @@ async function myInformation() {
 function buttonlogout() {
 
     setCookie('token', "__", 1);
-    window.location.href = "./home";
+    window.location.href = "./login";
 }

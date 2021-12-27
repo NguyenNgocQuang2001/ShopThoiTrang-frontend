@@ -59,11 +59,24 @@ body {
         height: 100%;
         background-color: white; }
         body div#container div#header-body div#show div#myAccount {
-          display: none;
           width: 100%;
           height: 100%; }
+          body div#container div#header-body div#show div#myAccount div#head-account {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 5%; }
+            body div#container div#header-body div#show div#myAccount div#head-account div.my-account {
+              width: 25%;
+              height: 100%;
+              text-align: center;
+              font-size: 25px;
+              border: 2px solid black;
+              background-color: #cbff97;
+              cursor: default; }
+            body div#container div#header-body div#show div#myAccount div#head-account div.my-account:hover {
+              color: #2947f3; }
         body div#container div#header-body div#show div#logout {
-          display: none;
           width: 100%;
           height: 100%;
           text-align: center; }
@@ -75,7 +88,7 @@ body {
           body div#container div#header-body div#show div#logout a:hover {
             color: #eeff00; }
         body div#container div#header-body div#show div#product {
-          display: block; }
+          display: flex; }
     body div#container div#footers {
       width: 100%;
       height: 150px;
