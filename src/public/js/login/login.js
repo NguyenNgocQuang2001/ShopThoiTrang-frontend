@@ -65,9 +65,10 @@ async function login() {
     try {
         var token = await getToken();
         setCookie('token', token.token, 1);
+        setCookie('user', token.user, 1);
         if (typeof(token) != "string") {
 
-            window.location.replace("./product");
+            window.location.replace('/product');
         } else {
             $('#notification-login').css("display", "block");
             //$('#login-account').val('');
@@ -93,3 +94,19 @@ async function signup() {
         console.log('loi server !!!');
     }
 }
+
+$('div#login input').keypress(function(e) {
+
+    if(e.key == 'Enter') {
+        e.preventDefault();
+        login();
+    }
+});
+
+$('div#register input').keypress(function(e) {
+
+    if(e.key == 'Enter') {
+        e.preventDefault();
+        signup();
+    }
+});

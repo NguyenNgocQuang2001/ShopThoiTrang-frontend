@@ -1,0 +1,191 @@
+div#control {
+
+    margin-top: 5px;
+    width: 98%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.123);
+    color: rgb(0, 0, 0);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0px 7px 7px 0px;
+
+    div#text {
+        margin-left: 3px;
+        display: block;
+        width: 100px;
+        height: 50%;
+        margin-top: 10px;
+        cursor: default;
+    }
+
+    div.choices {
+
+        width: 130px;
+        height: 70%;
+        border: 1px solid black;
+        margin-top: 5px;
+        background-color: white;
+        margin-right: 10px;
+        line-height: 27px;
+        display: inline;
+
+        div#macdinh {
+
+            background-color: red;
+        }
+
+        div.content {
+
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+
+            div.left {
+                margin-left: 1%;
+                width: 80%;
+                height: 100%;
+                text-align: start;
+            }
+    
+            div.right {
+    
+                width: 15%;
+                height: 100%;
+                text-align: end;
+            }
+        }
+
+        ul {
+
+            display: none;
+            margin-left: 0px;
+            z-index: 1;
+            li {
+                list-style-type: none;
+                width: 130px;
+                height: 100%;
+                margin-left: -40px;
+                cursor: pointer;
+            }
+            
+            li:first-child {
+
+                margin-top: -15px;
+            }
+
+            i {
+                display: none;
+                line-height: 27px;
+            }
+
+            li:hover {
+
+                background-color: rgb(197, 235, 31);
+            }
+        }
+
+        /*ul:active {
+
+            ul {
+                display: none;
+            }
+        }*/
+    }
+
+    div.choices:hover {
+
+        ul {
+            display: block;
+        }
+    }
+
+
+    /**** Search *****/
+
+    form {
+        
+        width: 300px;
+        height: 80%;
+        margin-left: calc(100% - 889px);
+        margin-top: 2px;
+        display: flex;
+        flex-direction: row;
+        
+        input {
+
+            width: 265px;
+            height: 92%;
+            border-radius: 7px 0px 0px 7px;
+            border: 1px solid rgb(0, 0, 0); 
+            border-right: none;
+            font-size: 20px;
+            outline: none;
+        }
+
+        input::-webkit-input-placeholder {
+
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+        div#labelid {
+
+            width: 35px;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            display: block;
+            border-radius: 0px 7px 7px 0px;
+            border: 1px solid rgb(0, 0, 0); 
+            border-left: none;
+            background-color: rgb(255, 255, 255);
+
+            label {
+
+                height: 100%;
+                font-size: 25px;
+                color: rgb(0, 89, 255);
+                text-align: center;
+                
+                i {
+                    line-height: 32px;
+                }
+            }
+
+            label:hover {
+
+                color: rgb(255, 0, 0);
+            }
+        }
+    }
+
+    div#shopping-cart {
+
+        width: 40px;
+        height: 94%;
+        margin-top: 0px;
+        font-size: 25px;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        color: red;
+        margin-left: 20px;
+        margin-right: 0px;
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+
+        i {
+            line-height: 40px;
+        }
+    }
+
+    div#shopping-cart:hover {
+
+        border: 1px solid rgb(0, 102, 255);
+        color: rgb(0, 102, 255);
+    }
+
+}

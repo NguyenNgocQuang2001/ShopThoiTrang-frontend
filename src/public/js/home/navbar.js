@@ -20,19 +20,23 @@ function products() {
             open = false;
         }
     } else {
-        window.location.href = './product';
+        window.location.href = '/product';
     }
 }
 
 async function myInformation() {
 
+    setCookie('search', '', 0);
+    setCookie('choice', '0', 1);
+    setCookie('page', '0', 0);
+    setCookie('startPos', '1', 0);
     try {
         var access = await accessToken();
         console.log(access.authen);
         if (access && access.authen == true) {
-            window.location.href = './profile';
+            window.location.href = '/profile/' + getCookie('user');
         } else {
-            window.location.href = './logout';
+            window.location.href = '/logout';
         }
     }
     catch(err) {
@@ -42,6 +46,11 @@ async function myInformation() {
 
 function buttonlogout() {
 
-    setCookie('token', "__", 1);
-    window.location.href = "./login";
+    setCookie('token', '', 0);
+    setCookie('user', '' , 0);
+    setCookie('search' ,'' , 0);
+    setCookie('choice', '0', 1);
+    setCookie('page', '0', 0);
+    setCookie('startPos', '1', 0);
+    window.location.href = "/login";
 }

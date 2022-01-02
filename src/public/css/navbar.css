@@ -1,0 +1,53 @@
+div#navbar {
+  width: 200px;
+  height: 100%;
+  background-color: rgba(88, 192, 27, 0.5);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+  div#navbar div.navbar-items {
+    width: 100%;
+    height: 40px;
+    font-size: 25px; }
+    div#navbar div.navbar-items a, div#navbar div.navbar-items i {
+      text-decoration: none;
+      cursor: pointer;
+      color: black;
+      position: relative;
+      top: 6px; }
+  div#navbar div#logo {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border: none;
+    margin: 0px;
+    padding: 0px; }
+    div#navbar div#logo img {
+      width: 100%; }
+  div#navbar div#home {
+    font-size: 50px;
+    height: 75px;
+    background-color: #0f1721;
+    border: none;
+    margin: 0px;
+    padding: 0px; }
+    div#navbar div#home a {
+      position: absolute;
+      text-decoration: none;
+      left: 20px;
+      top: 5px;
+      cursor: pointer;
+      color: #3a4688; }
+  div#navbar div#home:hover {
+    background-color: black; }
+    div#navbar div#home:hover a {
+      color: #eeff00; }
+  div#navbar div.navbar-items:hover {
+    background-color: black; }
+    div#navbar div.navbar-items:hover a, div#navbar div.navbar-items:hover i {
+      color: #eeff00; }
+  div#navbar div.product {
+    display: none; }
+  div#navbar div#buttonlogout {
+    position: absolute;
+    bottom: 0px; }

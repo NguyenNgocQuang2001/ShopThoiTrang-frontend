@@ -20,14 +20,33 @@ div#navbar {
             color: rgb(0, 0, 0);
             position: relative;
             top: 6px;
+
         }
 
+    }
+
+    div#logo {
+
+        width: 100%;
+        aspect-ratio: 1/1;
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        
+        img {
+
+            width: 100%;
+        }
     }
 
     div#home {
 
         font-size: 50px;
         height: 75px;
+        background-color: rgb(15,23,33);
+        border: none;
+        margin: 0px;
+        padding: 0px;
 
         a {
             position: absolute;
@@ -63,7 +82,7 @@ div#navbar {
     div#buttonlogout {
         
         position: absolute;
-        bottom: 10px;
+        bottom: 0px;
     }
 
 }

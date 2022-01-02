@@ -9,7 +9,7 @@ body {
     flex-direction: column; }
     body div#container div#header-body {
       width: 100%;
-      height: 95vh;
+      height: 120vh;
       border: none;
       display: flex;
       flex-direction: row; }
@@ -31,9 +31,21 @@ body {
             color: black;
             position: relative;
             top: 6px; }
+        body div#container div#header-body div#navbar div#logo {
+          width: 100%;
+          aspect-ratio: 1/1;
+          border: none;
+          margin: 0px;
+          padding: 0px; }
+          body div#container div#header-body div#navbar div#logo img {
+            width: 100%; }
         body div#container div#header-body div#navbar div#home {
           font-size: 50px;
-          height: 75px; }
+          height: 75px;
+          background-color: #0f1721;
+          border: none;
+          margin: 0px;
+          padding: 0px; }
           body div#container div#header-body div#navbar div#home a {
             position: absolute;
             text-decoration: none;
@@ -53,14 +65,15 @@ body {
           display: none; }
         body div#container div#header-body div#navbar div#buttonlogout {
           position: absolute;
-          bottom: 10px; }
+          bottom: 0px; }
       body div#container div#header-body div#show {
         width: calc(100% - 200px);
         height: 100%;
         background-color: white; }
         body div#container div#header-body div#show div#myAccount {
           width: 100%;
-          height: 100%; }
+          height: 100%;
+          display: none; }
           body div#container div#header-body div#show div#myAccount div#head-account {
             display: flex;
             flex-direction: row;
@@ -87,8 +100,224 @@ body {
             font-size: 20px; }
           body div#container div#header-body div#show div#logout a:hover {
             color: #eeff00; }
+        body div#container div#header-body div#show div#slider {
+          width: 100%;
+          height: 35%;
+          overflow: hidden;
+          position: relative;
+          margin-top: 5px; }
+          body div#container div#header-body div#show div#slider div.slides {
+            width: 500%;
+            height: 100%;
+            display: flex;
+            flex-direction: row; }
+            body div#container div#header-body div#show div#slider div.slides input {
+              display: none; }
+            body div#container div#header-body div#show div#slider div.slides #radio1:checked ~ .first {
+              margin-left: 0; }
+            body div#container div#header-body div#show div#slider div.slides #radio2:checked ~ .first {
+              margin-left: -20%; }
+            body div#container div#header-body div#show div#slider div.slides #radio3:checked ~ .first {
+              margin-left: -40%; }
+            body div#container div#header-body div#show div#slider div.slides #radio4:checked ~ .first {
+              margin-left: -60%; }
+            body div#container div#header-body div#show div#slider div.slides #radio5:checked ~ .first {
+              margin-left: -80%; }
+            body div#container div#header-body div#show div#slider div.slides div.slide {
+              transition: 2s;
+              width: 20%;
+              text-align: center; }
+              body div#container div#header-body div#show div#slider div.slides div.slide img {
+                width: 98%;
+                height: 100%;
+                border-radius: 20px; }
+            body div#container div#header-body div#show div#slider div.slides .navigation-auto {
+              position: absolute;
+              display: flex;
+              width: 100%;
+              justify-content: center;
+              top: calc(100% - 30px); }
+            body div#container div#header-body div#show div#slider div.slides .navigation-auto div {
+              border: 2px solid #40D3DC;
+              padding: 5px;
+              border-radius: 10px;
+              transition: 1s; }
+            body div#container div#header-body div#show div#slider div.slides .navigation-auto div:not(:last-child) {
+              margin-right: 40px; }
+            body div#container div#header-body div#show div#slider div.slides #radio1:checked ~ .navigation-auto .auto-btn1 {
+              background: #40D3DC; }
+            body div#container div#header-body div#show div#slider div.slides #radio2:checked ~ .navigation-auto .auto-btn2 {
+              background: #40D3DC; }
+            body div#container div#header-body div#show div#slider div.slides #radio3:checked ~ .navigation-auto .auto-btn3 {
+              background: #40D3DC; }
+            body div#container div#header-body div#show div#slider div.slides #radio4:checked ~ .navigation-auto .auto-btn4 {
+              background: #40D3DC; }
+            body div#container div#header-body div#show div#slider div.slides #radio5:checked ~ .navigation-auto .auto-btn5 {
+              background: #40D3DC; }
+          body div#container div#header-body div#show div#slider div.navigation-manual {
+            width: 100%;
+            margin-top: -30px;
+            display: flex;
+            justify-content: center; }
+            body div#container div#header-body div#show div#slider div.navigation-manual label.manual-btn {
+              border: 2px solid #40D3DC;
+              padding: 5px;
+              border-radius: 10px;
+              cursor: pointer;
+              transition: 1s;
+              z-index: 1; }
+            body div#container div#header-body div#show div#slider div.navigation-manual label.manual-btn:not(:last-child) {
+              margin-right: 40px; }
+            body div#container div#header-body div#show div#slider div.navigation-manual label.manual-btn:hover {
+              background: #40D3DC; }
+        body div#container div#header-body div#show div#control {
+          margin-top: 5px;
+          width: 98%;
+          height: 40px;
+          background-color: rgba(0, 0, 0, 0.123);
+          color: black;
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          flex-direction: row;
+          border-radius: 0px 7px 7px 0px;
+          /**** Search *****/ }
+          body div#container div#header-body div#show div#control div#text {
+            margin-left: 3px;
+            display: block;
+            width: 100px;
+            height: 50%;
+            margin-top: 10px;
+            cursor: default; }
+          body div#container div#header-body div#show div#control div.choices {
+            width: 130px;
+            height: 70%;
+            border: 1px solid black;
+            margin-top: 5px;
+            background-color: white;
+            margin-right: 10px;
+            line-height: 27px;
+            display: inline;
+            /*ul:active {
+
+            ul {
+                display: none;
+            }
+        }*/ }
+            body div#container div#header-body div#show div#control div.choices div#macdinh {
+              background-color: red; }
+            body div#container div#header-body div#show div#control div.choices div.content {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: row;
+              cursor: pointer; }
+              body div#container div#header-body div#show div#control div.choices div.content div.left {
+                margin-left: 1%;
+                width: 80%;
+                height: 100%;
+                text-align: start; }
+              body div#container div#header-body div#show div#control div.choices div.content div.right {
+                width: 15%;
+                height: 100%;
+                text-align: end; }
+            body div#container div#header-body div#show div#control div.choices ul {
+              display: none;
+              margin-left: 0px;
+              z-index: 1; }
+              body div#container div#header-body div#show div#control div.choices ul li {
+                list-style-type: none;
+                width: 130px;
+                height: 100%;
+                margin-left: -40px;
+                cursor: pointer; }
+              body div#container div#header-body div#show div#control div.choices ul li:first-child {
+                margin-top: -15px; }
+              body div#container div#header-body div#show div#control div.choices ul i {
+                display: none;
+                line-height: 27px; }
+              body div#container div#header-body div#show div#control div.choices ul li:hover {
+                background-color: #c5eb1f; }
+          body div#container div#header-body div#show div#control div.choices:hover ul {
+            display: block; }
+          body div#container div#header-body div#show div#control form {
+            width: 300px;
+            height: 80%;
+            margin-left: calc(100% - 889px);
+            margin-top: 2px;
+            display: flex;
+            flex-direction: row; }
+            body div#container div#header-body div#show div#control form input {
+              width: 265px;
+              height: 92%;
+              border-radius: 7px 0px 0px 7px;
+              border: 1px solid black;
+              border-right: none;
+              font-size: 20px;
+              outline: none; }
+            body div#container div#header-body div#show div#control form input::-webkit-input-placeholder {
+              font-size: 15px;
+              line-height: 20px; }
+            body div#container div#header-body div#show div#control form div#labelid {
+              width: 35px;
+              height: 100%;
+              margin: 0px;
+              padding: 0px;
+              display: block;
+              border-radius: 0px 7px 7px 0px;
+              border: 1px solid black;
+              border-left: none;
+              background-color: white; }
+              body div#container div#header-body div#show div#control form div#labelid label {
+                height: 100%;
+                font-size: 25px;
+                color: #0059ff;
+                text-align: center; }
+                body div#container div#header-body div#show div#control form div#labelid label i {
+                  line-height: 32px; }
+              body div#container div#header-body div#show div#control form div#labelid label:hover {
+                color: red; }
+          body div#container div#header-body div#show div#control div#shopping-cart {
+            width: 40px;
+            height: 94%;
+            margin-top: 0px;
+            font-size: 25px;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: red;
+            margin-left: 20px;
+            margin-right: 0px;
+            background-color: black;
+            text-align: center; }
+            body div#container div#header-body div#show div#control div#shopping-cart i {
+              line-height: 40px; }
+          body div#container div#header-body div#show div#control div#shopping-cart:hover {
+            border: 1px solid #0066ff;
+            color: #0066ff; }
         body div#container div#header-body div#show div#product {
-          display: flex; }
+          width: 100%;
+          height: calc(65% - 89px); }
+        body div#container div#header-body div#show div#paginations {
+          width: 100%;
+          height: 40px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center; }
+          body div#container div#header-body div#show div#paginations div.pagination {
+            height: 38px;
+            width: 38px;
+            border: 1px solid black;
+            background-color: white;
+            border-right: none;
+            text-align: center;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 37px;
+            cursor: default; }
+          body div#container div#header-body div#show div#paginations div#lastPag {
+            border-right: 1px solid black; }
+          body div#container div#header-body div#show div#paginations div.pagination:hover {
+            color: #0004ff; }
     body div#container div#footers {
       width: 100%;
       height: 150px;
