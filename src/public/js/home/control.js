@@ -2,21 +2,13 @@ $(document).ready(function() {
     
     var len = $('div.choices').length;
     var choices = [];
-    var choice = Number(getCookie('choice')) || 0;
-
-    const query = () => {
-        var sp = Number(getCookie('startPos')) || 1;
-        var pg = Number(getCookie('page')) || 0;
-        var que = '?';
-        var sortBy = getCookie('sortBy') || 'Mặc định';
-        var search = getCookie('search') || null;
-        que = que + 'sortBy=' + sortBy;
-        if (search) {
-            que = que + '&search=' + search;
-        }
-        que = que + '&page=' + (sp + pg);
-        return que;
+    var sortby = $.urlParam('sortBy') || 'Mặc định';
+    var page = Number($.urlParam('page')) || 1;
+    if (page < 0) {
+        page = 1;
     }
+    var search = $.urlParam('search') || '';
+
     for (let i = 0; i < len; ++i) {
 
         var opt = $('div.choices > div.content > div.left').eq(i).text();
@@ -37,28 +29,42 @@ $(document).ready(function() {
     $('li div.content').click(function() {
         //console.log($(this).find('div.left').eq(0).text());
         //console.log($(this).parents('div.choices').eq(0).text());
-        choice = $('li div.content').index(this);
-        setCookie('choice', choice, 0.05);
-        var opt = $(this).find('div.left').eq(0).text();
-        setCookie('sortBy', opt, 0.05);
-        window.location.href = "/product" + query();
+        updateQuery('sortBy', $(this).find('div.left').eq(0).text());
+        updateQuery('search', search);
+        updateQuery('page', page);
+        setParams(query);
     });
 
     $('#search').keypress(function(e) {
 
         if(e.key == 'Enter') {
             e.preventDefault();
-            setCookie('search', $('#search').val(), 0.05);
-            window.location.href = "/product" + query();
+            updateQuery('search', $('#search').val());
+            updateQuery('sortBy', sortby);
+            updateQuery('page', page);
+            setParams(query);
         }
     });
 
     $('#labelid').click(function() {
-        setCookie('search', $('#search').val(), 0.05);
-        window.location.href = "/product" + query();
+        updateQuery('search', $('#search').val());
+        updateQuery('sortBy', sortby);
+        updateQuery('page', page);
+        setParams(query);
     });
 
-    function sortby(choice) {
+    function findChoice(sortBy) {
+
+        var leng = $('li > div.content > div.left').length;
+        for (let i = 0; i < leng; ++i) {
+            if (sortBy == $('li > div.content > div.left').eq(i).text()) {
+                return i;
+            }
+        }
+        return 0;
+    }
+
+    function choiceSort(choice) {
 
         setcolor();
         $('li div.content').eq(choice).closest('div.choices').find('div.content').eq(0).css("background-color", "red");
@@ -68,10 +74,8 @@ $(document).ready(function() {
         $('li > div.content > div.right > i').css("display", "none");
         $('li div.content').eq(choice).find('i').eq(0).css("display", "block");
         $('li div.content').eq(choice).css("color", "red");
-        var search = getCookie('search') || '';
         $('#search').val(search);
     }
 
-    sortby(choice);
-
+    choiceSort(findChoice(sortby));
 });

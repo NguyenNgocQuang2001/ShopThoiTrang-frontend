@@ -26,10 +26,6 @@ function products() {
 
 async function myInformation() {
 
-    setCookie('search', '', 0);
-    setCookie('choice', '0', 1);
-    setCookie('page', '0', 0);
-    setCookie('startPos', '1', 0);
     try {
         var access = await accessToken();
         console.log(access.authen);
@@ -48,9 +44,5 @@ function buttonlogout() {
 
     setCookie('token', '', 0);
     setCookie('user', '' , 0);
-    setCookie('search' ,'' , 0);
-    setCookie('choice', '0', 1);
-    setCookie('page', '0', 0);
-    setCookie('startPos', '1', 0);
     window.location.href = "/login";
 }

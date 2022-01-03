@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
 
 router.get('/product', (req, res, next) => {
 
-    var sortBy = req.query.sortBy;
+    /*var sortBy = req.query.sortBy;
     var search = req.query.search;
     var page = Number(req.query.page) || 1;
     if (page < 1) {
@@ -36,7 +36,7 @@ router.get('/product', (req, res, next) => {
 
     res.cookie('startPos', String(Math.floor((page - 1) / 9) * 9 + 1), {
         maxAge : 60 * 60 * 1000
-    });
+    });*/
 
     res.sendFile(path.join(__dirname, '../resources/views/product.html'));
 });
