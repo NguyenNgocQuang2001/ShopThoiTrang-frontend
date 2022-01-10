@@ -1,0 +1,36 @@
+div#order-pro {
+
+    width: 100%;
+    height: calc(100% - 45px);
+    display: flex;
+    flex-direction: row;
+
+    div#slideshow, div#order {
+
+        width: calc(50% - 10px);
+        margin: 5px;
+        height: calc(100% - 10px);
+    }
+
+    div#show1 {
+
+        width: 100%;
+        height: 80%;
+        background-color: blue;
+
+        img {
+
+            //width: 100%;
+            //height: 300px;
+            object-fit: cover;
+            //object-position: 30% 150%;
+        }
+    }
+
+    div#show2 {
+
+        width: 100%;
+        height: 20%;
+        background-color: coral;
+    }
+}

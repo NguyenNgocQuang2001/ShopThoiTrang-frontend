@@ -41,6 +41,11 @@ router.get('/product', (req, res, next) => {
     res.sendFile(path.join(__dirname, '../resources/views/product.html'));
 });
 
+router.get('/product/:idpro', (req, res, next) => {
+
+    res.sendFile(path.join(__dirname, '../resources/views/orderproduct.html'));
+});
+
 router.get('/login', (req, res, next) => {
 
     res.sendFile(path.join(__dirname, '../resources/views/login.html'));

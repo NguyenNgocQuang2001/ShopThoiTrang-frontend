@@ -1,12 +1,12 @@
 div#control {
 
     margin-top: 5px;
-    width: 98%;
+    width: calc(100% - 10px);
     height: 40px;
     background-color: rgba(0, 0, 0, 0.123);
     color: rgb(0, 0, 0);
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 5px;
+    margin-right: 5px;
     display: flex;
     flex-direction: row;
     border-radius: 0px 7px 7px 0px;
@@ -20,6 +20,28 @@ div#control {
         cursor: default;
     }
 
+    div#return {
+        margin-left: 3px;
+        display: block;
+        width: 100px;
+        height: 80%;
+        margin-top: 3px;
+        text-align: center;
+        line-height: 30px;
+        cursor: default;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    div#return:hover {
+
+        border: 1px solid red;
+        color: red;
+        background-color: rgb(41, 4, 255);
+    }
+
     div.choices {
 
         width: 130px;
@@ -30,6 +52,7 @@ div#control {
         margin-right: 10px;
         line-height: 27px;
         display: inline;
+        z-index: 1;
 
         div#macdinh {
 
@@ -63,7 +86,7 @@ div#control {
 
             display: none;
             margin-left: 0px;
-            z-index: 1;
+
             li {
                 list-style-type: none;
                 width: 130px;
@@ -118,7 +141,7 @@ div#control {
         input {
 
             width: 265px;
-            height: 92%;
+            height: 93%;
             border-radius: 7px 0px 0px 7px;
             border: 1px solid rgb(0, 0, 0); 
             border-right: none;

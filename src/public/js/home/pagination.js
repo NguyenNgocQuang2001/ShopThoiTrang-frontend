@@ -1,17 +1,13 @@
-var sortby = $.urlParam('sortBy') || 'Mặc định';
 var page = Number($.urlParam('page')) || 1;
 if (page < 0) {
     page = 1;
 }
-var search = $.urlParam('search') || '';
 
 function backback() {
 
     if (page > 9) {
 
         updateQuery('page', Math.floor((page - 1) / 9) * 9);
-        updateQuery('search', search);
-        updateQuery('sortBy', sortby);
         setParams(query);
     }
 }
@@ -20,8 +16,6 @@ function backk() {
 
     if (page > 1) {
         updateQuery('page', page - 1);
-        updateQuery('search', search);
-        updateQuery('sortBy', sortby);
         setParams(query);
     }
 }
@@ -29,16 +23,12 @@ function backk() {
 function nextnext() {
 
     updateQuery('page', Math.floor((page - 1) / 9) * 9 + 10);
-    updateQuery('search', search);
-    updateQuery('sortBy', sortby);
     setParams(query);
 }
 
 function nextt() {
 
     updateQuery('page', page + 1);
-    updateQuery('search', search);
-    updateQuery('sortBy', sortby);
     setParams(query);
 }
 
@@ -68,8 +58,6 @@ numberPage(Math.floor((page - 1) / 9) * 9 + 1, 9, true);
 $('div.number').click(function() {
 
     updateQuery('page', $(this).text());
-    updateQuery('search', search);
-    updateQuery('sortBy', sortby);
     setParams(query);
 });
 

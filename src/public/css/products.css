@@ -1,3 +1,30 @@
 div#product {
-  width: 100%;
-  height: calc(65% - 89px); }
+  width: calc(100% - 10px);
+  height: calc(65% - 99px);
+  margin: 5px;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 1fr; }
+  div#product div.product-items {
+    margin: 3px;
+    font-size: 20px;
+    border: 2px solid rgba(255, 0, 0, 0); }
+    div#product div.product-items img {
+      width: 100%;
+      height: 80%; }
+    div#product div.product-items div.pro-name {
+      color: black;
+      cursor: default; }
+    div#product div.product-items div.price {
+      display: inline;
+      cursor: default; }
+      div#product div.product-items div.price div.sale {
+        display: inline;
+        text-decoration: line-through;
+        color: rgba(81, 82, 83, 0.685); }
+      div#product div.product-items div.price div.cost {
+        display: inline;
+        color: red; }
+  div#product div.product-items:hover {
+    border: 2px solid red; }

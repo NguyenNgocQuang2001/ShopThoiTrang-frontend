@@ -74,6 +74,11 @@ var query = {
 
 function updateQuery(key, value) {
 
+    var keyy = Object.keys(query);
+    for (let i = 0; i < keyy.length; ++i) {
+
+        query[keyy[i]] = $.urlParam(keyy[i]) || '';
+    }
     query[key] = value;
 }
 
@@ -93,7 +98,13 @@ function setParams(att) {
             }
         }
     }
-    window.location.search = query;
+
+    if (query[query.length - 1] == '&') {
+        query = query.slice(0, query.length - 1);
+    }
+
+    //window.location.search = query;
+    window.location.href = '/product' + query;
 }
 
 // console.log(window.location.href);
