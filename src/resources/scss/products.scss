@@ -16,8 +16,9 @@ div#product {
 
         img {
 
-            width: 100%;
-            height: 80%;
+            //width: 100%;
+            //height: 80%;
+            object-fit: cover;
         }
 
         div.pro-name {
@@ -49,5 +50,13 @@ div#product {
     div.product-items:hover {
     
         border: 2px solid rgb(255, 0, 0);
+    }
+
+    div#not-found {
+
+        text-align: center;
+        line-height: 100px;
+        font-size: 30px;
+        display: none;
     }
 }

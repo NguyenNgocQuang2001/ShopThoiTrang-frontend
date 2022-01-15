@@ -67,6 +67,7 @@ function insertParam(key, value) {
 
 var query = {
 
+    'type' : '',
     'sortBy' : 'Mặc định',
     'search' : '',
     'page' : '1'
@@ -82,7 +83,7 @@ function updateQuery(key, value) {
     query[key] = value;
 }
 
-function setParams(att) {
+function setParams(path, att) {
 
     var key = Object.keys(att);
     var query = "";
@@ -104,7 +105,7 @@ function setParams(att) {
     }
 
     //window.location.search = query;
-    window.location.href = '/product' + query;
+    window.location.href = path + query;
 }
 
 // console.log(window.location.href);

@@ -28,7 +28,7 @@ async function myInformation() {
 
     try {
         var access = await accessToken();
-        console.log(access.authen);
+        //console.log(access.authen);
         if (access && access.authen == true) {
             window.location.href = '/profile/' + getCookie('user');
         } else {
