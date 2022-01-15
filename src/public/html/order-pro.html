@@ -1,16 +1,72 @@
 <div id="slideshow">
     <div id="show1">
-        <img src="/images/vay2.jpg">
+        <img src="">
     </div>
     <div id="show2">
-        <!--img src="/images/vay1.jpg">
-        <img src="/images/vay2.jpg">
-        <img src="/images/vay3.jpg">
-        <img src="/images/vay4.jpg"-->
+        <div id="to-left" onclick="toLeft()">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div id="allimg">
+            <!--div class="allimg-item">
+                <img src="/images/vay1.jpg">
+            </div>
+            <div class="allimg-item">
+                <img src="/images/vay2.jpg">
+            </div>
+            <div class="allimg-item">
+                <img src="/images/vay3.jpg">
+            </div>
+            <div class="allimg-item">
+                <img src="/images/vay4.jpg">
+            </div>
+            <div class="allimg-item">
+                <img src="/images/vay5.jpg">
+            </div>
+            <div class="allimg-item">
+                <img src="/images/vay6.jpg">
+            </div-->
+        </div>
+        <div id="to-right" onclick="toRight()">
+            <i class="fas fa-chevron-right"></i>
+        </div>
     </div>
 </div>
 <div id="order">
-    
+    <div id="description" class="order-items">
+        ............
+    </div>
+    <div id="sold" class="order-items">
+        Đã bán : 300
+    </div>
+    <div id="sale" class="order-items">
+        Sale : 50%
+    </div>
+    <div id="price" class="order-items">
+        <div id="oldcost">
+            100.000đ
+        </div>
+        <div id="newcost">
+            100.000đ
+        </div>
+    </div>
+    <div id="quantily" class="order-items">
+        <div id="minus" onclick="minusPro()">
+            <i class="fas fa-minus"></i>
+        </div>
+        <div id="quan-input">
+            <input type="number">
+        </div>
+        <div id="plus" onclick="plusPro()">
+            <i class="fas fa-plus"></i>
+        </div>
+    </div>
+    <div id="quan-rest" class="order-items">
+        Số lượng sản phẩm còn lại trong kho : 34195
+    </div>
+    <div id="add-pro" class="order-items">
+         &nbsp;Thêm vào giỏ hàng&nbsp;
+        <i class="fas fa-cart-plus"></i>
+    </div>
 </div>
 
 <script text="text/javascript" src="/js/home/order-pro.js"></script>

@@ -114,6 +114,7 @@ function setData() {
 
                 $project : {
     
+                    product_id : 1,
                     createDate : 1,
                     name : 1,
                     cost : 1,
@@ -260,18 +261,20 @@ async function getPros() {
         if (restpage > 0) {
             divpage += 1;
         }
-        if (divpage < 9) {
+        if (data.allpage > 0) {
+            if (divpage < 9) {
 
-            numberPage(Math.floor((page - 1) / 9) * 9 + 1, divpage, false);
-        } else {
-
-            numberPage(Math.floor((page - 1) / 9) * 9 + 1, 9, true);
+                numberPage(Math.floor((page - 1) / 9) * 9 + 1, divpage, false);
+            } else {
+    
+                numberPage(Math.floor((page - 1) / 9) * 9 + 1, 9, true);
+            }
+            clickNumber();
+            drawPage((page - 1) % 9);
         }
-        clickNumber();
-        drawPage((page - 1) % 9);
         setPathImage(data.data);
         sizeImg();
-        clickProItem();
+        clickProItem(data.data);
     }
 }
 

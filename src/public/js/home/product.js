@@ -1,10 +1,13 @@
-function clickProItem() {
+function clickProItem(data) {
 
-    $('div.product-items').click(function() {
+    var len = $('div.product-items').length;
+    for (let i = 0; i < len; ++i) {
+        $('div.product-items').eq(i).click(function() {
 
-        var name = $(this).find('div.pro-name').eq(0).text().trim();
-        window.location.href = '/product/' + name;
-    });
+            var name = $(this).find('div.pro-name').eq(0).text().trim();
+            window.location.href = '/product/' + name + "_" + data[i].product_id;
+        });
+    }
 }
 
 function sizeImg() {

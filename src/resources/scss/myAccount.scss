@@ -3,6 +3,8 @@ div#myAccount {
     width: 100%;
     height: 100%;
     display: none;
+    display: flex;
+    flex-direction: column;
 
     div#head-account {
 
@@ -27,4 +29,6 @@ div#myAccount {
         }
 
     }
+
+    @import 'bodyAccount';
 }

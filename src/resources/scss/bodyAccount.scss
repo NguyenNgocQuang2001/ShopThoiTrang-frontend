@@ -1,0 +1,21 @@
+div#body-account {
+
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    //background-color: blue;
+
+    div#imgprofile {
+
+        width: 600px;
+        height: 100%;
+    }
+
+    div#info {
+
+        width: calc(100% - 600px);
+        height: 100%;
+    }
+}

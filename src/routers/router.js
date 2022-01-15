@@ -66,6 +66,11 @@ router.get('/profile', (req, res, next) => {
     }
 });
 
+router.get('/profile/cart', (req, res, next) => {
+
+    res.sendFile(path.join(__dirname, '../resources/views/cart.html'));
+});
+
 router.get('/profile/:user', (req, res, next) => {
 
     res.sendFile(path.join(__dirname, '../resources/views/profile.html'));

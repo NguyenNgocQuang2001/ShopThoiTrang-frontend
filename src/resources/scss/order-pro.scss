@@ -12,25 +12,9 @@ div#order-pro {
         height: calc(100% - 10px);
     }
 
-    div#show1 {
+    @import 'show1';
 
-        width: 100%;
-        height: 80%;
-        background-color: blue;
+    @import 'show2';
 
-        img {
-
-            //width: 100%;
-            //height: 300px;
-            object-fit: cover;
-            //object-position: 30% 150%;
-        }
-    }
-
-    div#show2 {
-
-        width: 100%;
-        height: 20%;
-        background-color: coral;
-    }
+    @import 'order';
 }

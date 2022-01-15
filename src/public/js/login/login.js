@@ -110,3 +110,20 @@ $('div#register input').keypress(function(e) {
         signup();
     }
 });
+
+async function checkToken() {
+
+    try {
+        var access = await accessToken();
+        var username = getCookie('user')
+        //console.log(access.authen);
+        if (access && access.authen == true && username && username != '') {
+            window.location.href = '/profile/' + username;
+        }
+    }
+    catch(err) {
+        console.log('loi server !!!');
+    }
+}
+
+checkToken();
