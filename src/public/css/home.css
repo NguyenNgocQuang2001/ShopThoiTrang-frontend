@@ -99,11 +99,102 @@ body {
             display: flex;
             flex-direction: row; }
             body div#container div#header-body div#show div#myAccount div#body-account div#imgprofile {
-              width: 600px;
-              height: 100%; }
+              width: 400px;
+              height: calc(100% - 10px);
+              margin-top: 10px; }
+              body div#container div#header-body div#show div#myAccount div#body-account div#imgprofile img {
+                width: 400px;
+                height: 450px;
+                object-fit: cover; }
+              body div#container div#header-body div#show div#myAccount div#body-account div#imgprofile video#videobycamera {
+                display: none;
+                object-fit: cover; }
+              body div#container div#header-body div#show div#myAccount div#body-account div#imgprofile canvas#canvasforvideo {
+                display: none;
+                object-fit: cover; }
+              body div#container div#header-body div#show div#myAccount div#body-account div#imgprofile div#loadimg {
+                display: flex;
+                flex-direction: row;
+                margin-top: 10px;
+                justify-content: center; }
+                body div#container div#header-body div#show div#myAccount div#body-account div#imgprofile div#loadimg label.loadby {
+                  height: 30px;
+                  width: 100px;
+                  border: 1px solid black;
+                  text-align: center;
+                  line-height: 30px;
+                  background-color: #cea4a4;
+                  cursor: default; }
+                body div#container div#header-body div#show div#myAccount div#body-account div#imgprofile div#loadimg input#inputlib {
+                  display: none; }
+                body div#container div#header-body div#show div#myAccount div#body-account div#imgprofile div#loadimg label#loadbycamera {
+                  margin-right: 20px; }
+                body div#container div#header-body div#show div#myAccount div#body-account div#imgprofile div#loadimg label.loadby:hover {
+                  background-color: red; }
             body div#container div#header-body div#show div#myAccount div#body-account div#info {
-              width: calc(100% - 600px);
-              height: 100%; }
+              width: calc(100% - 400px);
+              height: calc(100% - 50px);
+              margin-top: 50px;
+              margin-left: 50px;
+              display: flex;
+              flex-direction: row; }
+              body div#container div#header-body div#show div#myAccount div#body-account div#info div#label-info {
+                display: flex;
+                flex-direction: column;
+                width: 150px;
+                height: 100%; }
+                body div#container div#header-body div#show div#myAccount div#body-account div#info div#label-info label {
+                  width: 100%;
+                  height: 40px;
+                  font-size: 20px; }
+              body div#container div#header-body div#show div#myAccount div#body-account div#info div#input-info {
+                display: flex;
+                flex-direction: column;
+                width: calc(100% - 550px);
+                height: 100%; }
+                body div#container div#header-body div#show div#myAccount div#body-account div#info div#input-info form {
+                  height: 40px;
+                  font-size: 20px; }
+                  body div#container div#header-body div#show div#myAccount div#body-account div#info div#input-info form input {
+                    width: 400px;
+                    height: 20px;
+                    font-size: 15px; }
+                body div#container div#header-body div#show div#myAccount div#body-account div#info div#input-info form#radio-input {
+                  display: flex;
+                  flex-direction: row; }
+                  body div#container div#header-body div#show div#myAccount div#body-account div#info div#input-info form#radio-input div.name-input {
+                    height: 40px;
+                    margin-right: 5px; }
+                  body div#container div#header-body div#show div#myAccount div#body-account div#info div#input-info form#radio-input div.radio-input {
+                    width: 20px;
+                    height: 15px;
+                    font-size: 20px;
+                    margin-right: 50px; }
+                    body div#container div#header-body div#show div#myAccount div#body-account div#info div#input-info form#radio-input div.radio-input input {
+                      width: 20px;
+                      height: 15px;
+                      margin-top: 5px; }
+                body div#container div#header-body div#show div#myAccount div#body-account div#info div#input-info div#fixinfo {
+                  margin-top: 20px;
+                  margin-left: 80px;
+                  height: 30px;
+                  width: 100px;
+                  border: 1px solid black;
+                  text-align: center;
+                  line-height: 30px;
+                  background-color: #cea4a4;
+                  cursor: pointer; }
+                body div#container div#header-body div#show div#myAccount div#body-account div#info div#input-info div#myAcc-notify {
+                  margin-top: 20px;
+                  margin-left: 30px;
+                  height: 30px;
+                  width: 300px;
+                  line-height: 30px;
+                  color: red;
+                  cursor: default;
+                  display: none; }
+                body div#container div#header-body div#show div#myAccount div#body-account div#info div#input-info div#fixinfo:hover {
+                  background-color: red; }
         body div#container div#header-body div#show div#logout {
           width: 100%;
           height: 100%;

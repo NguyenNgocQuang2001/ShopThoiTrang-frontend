@@ -126,12 +126,12 @@ function setOrder(data) {
 function minusPro() {
 
     var quan = Number($('#quan-input > input').eq(0).val());
-    if (quan && quan != '' && quan > 0) {
+    if (quan && quan != '' && quan > 1) {
 
         $('#quan-input > input').eq(0).val(quan - 1);
     } else {
 
-        $('#quan-input > input').eq(0).val(0);
+        $('#quan-input > input').eq(0).val(1);
     }
 }
 

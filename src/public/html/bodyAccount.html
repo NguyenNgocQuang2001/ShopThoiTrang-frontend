@@ -1,32 +1,67 @@
 <div id="imgprofile">
-    <img src="/images/vay.png">
+    <img src="/images/avatar.png" id="represent" alt="No images">
+    <video id="videobycamera" width="400" height="450" autoplay></video>
+    <canvas id="canvasforvideo" width="400" height="450"></canvas>
+    <div id="loadimg">
+        <label id="loadbycamera" class="loadby" onclick="takePhoto()">
+            Chụp ảnh
+        </label>
+        <label id="loadbylib" class="loadby" for="inputlib">
+            Chọn ảnh
+        </label>
+        <input type="file" accept="image/*" id="inputlib" onchange="chooseImg(this)">
+    </div>
 </div>
 <div id="info">
-    <form>
-        <label for="fname1">Tên đăng nhập</label><br>
-        <input type="text" id="fname1"><br>
-    </form>
-    <form>
-        <label for="fname2">Họ và tên</label><br>
-        <input type="text" id="fname2"><br>
-    </form>
-    <form>
-        <label for="fname3">Số điện thoại</label><br>
-        <input type="text" id="fname3"><br>
-    </form>
-    <form>
-        <label for="fname4">Email</label><br>
-        <input type="text" id="fname4"><br>
-    </form>
-    <form>
-        <p>Giới tính</p>
-        <label for="fname5">Nam</label><br>
-        <input type="radio" id="fname5"><br>
-        <label for="fname6">Nữ</label><br>
-        <input type="radio" id="fname6"><br>
-    </form>
-    <form>
-        <label for="fname7">Ngày sinh</label><br>
-        <input type="date" id="fname7"><br>
-    </form>
+    <div id="label-info">
+        <label for="fname1">Tên đăng nhập</label>
+        <label for="fname2">Họ và tên</label>
+        <label for="fname3">Số điện thoại</label>
+        <label for="fname4">Email</label>
+        <label>Giới tính</label>
+        <label for="fname7">Ngày sinh</label>
+        <label for="fname8">Địa chỉ</label>
+    </div>
+    <div id="input-info">
+        <form>
+            <input type="text" id="fname1" disabled>
+        </form>
+        <form>
+            <input type="text" id="fname2" disabled>
+        </form>
+        <form>
+            <input type="text" id="fname3" disabled>
+        </form>
+        <form>
+            <input type="text" id="fname4" disabled>
+        </form>
+        <form id="radio-input">
+            <div class="name-input">
+                <label for="fname5">Nam</label>
+            </div>
+            <div class="radio-input">
+                <input type="radio" id="fname5" disabled onclick="gioitinhnam()">
+            </div>
+            <div class="name-input">
+                <label for="fname5">Nữ</label>
+            </div>
+            <div class="radio-input">
+                <input type="radio" id="fname6" disabled  onclick="gioitinhnu()">
+            </div>
+        </form>
+        <form>
+            <input type="date" id="fname7" disabled>
+        </form>
+        <form>
+            <input type="text" id="fname8" disabled>
+        </form>
+        <div id="fixinfo" onclick="fixinfo()">
+            Chỉnh sửa
+        </div>
+        <div id="myAcc-notify">
+            Cập nhật thất bại !!!
+        </div>
+    </div>
 </div>
+
+<script text="text/javascript" src="/js/home/bodyAccount.js"></script>
