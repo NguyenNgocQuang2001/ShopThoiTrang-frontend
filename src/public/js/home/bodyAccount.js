@@ -2,6 +2,8 @@ var infor = "";
 var save = false;
 var open = false;
 
+
+$('div#myProfile').css("background-color", "red");
 function setUpdateInfor() {
 
     var exist = [
@@ -258,7 +260,7 @@ async function takePhoto() {
         $('img#represent').prop('src', image_data_url);
         const mediaStream = video.srcObject;
         const tracks = mediaStream.getTracks();
-        console.log(tracks);
+        // console.log(tracks);
         tracks[0].stop();
         //tracks.forEach(track => track.stop())
         var data = { 

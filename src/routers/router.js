@@ -71,6 +71,11 @@ router.get('/profile/cart', (req, res, next) => {
     res.sendFile(path.join(__dirname, '../resources/views/cart.html'));
 });
 
+router.get('/profile/order', (req, res, next) => {
+
+    res.sendFile(path.join(__dirname, '../resources/views/order.html'));
+});
+
 router.get('/profile/:user', (req, res, next) => {
 
     res.sendFile(path.join(__dirname, '../resources/views/profile.html'));

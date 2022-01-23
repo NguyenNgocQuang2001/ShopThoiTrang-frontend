@@ -1,0 +1,211 @@
+div#my-Cart {
+
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+
+    div#body-cart {
+
+        width: calc(100% - 10px);
+        height: 475px;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+        //background-color: blue;
+
+        div#cart-notify {
+    
+            text-align: center;
+            margin-top: 25px;
+            font-size: 30px;
+            display: none;
+        }
+    
+        div.neworder {
+    
+            width: 100%;
+            height: 100px;
+            //background-color: blue;
+            margin-top: 5px;
+    
+            display: flex;
+            flex-direction: row;
+    
+            div.order-oke {
+    
+                width: 40px;
+                height: 100px;
+    
+                text-align: center;
+    
+                input {
+    
+                    margin-top: 42px;
+                }
+            }
+    
+            img {
+    
+                width: 100px;
+                height: 100px;
+            }
+    
+            div.order-pro {
+    
+                width: calc(100% - 220px);
+                height: 60px;
+                margin-left: 10px;
+                font-size: 20px;
+                display: block;
+    
+                div.name-pro {
+    
+                    height: 40px;
+                    display: block;
+                }
+    
+                div.cost-pro {
+    
+                    height: 40px;
+                    display: block;
+                    color: red;
+                }
+    
+                div.quan-pro {
+    
+                    height: 20px;
+                    display: block;
+                }
+    
+            }
+    
+            div.id-pro {
+                display: none;
+            }
+
+            div.path-pro {
+                display: none;
+            }
+
+            div.delete-order {
+
+                width: 60px;
+                height: 100px;
+                line-height: 80px;
+                text-align: center;
+            }
+
+            div.delete-order:hover {
+
+                color: red;
+            }
+        }
+
+        div#info-order {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 30px;
+            display: none;
+
+            div#label-info-order {
+
+                display: flex;
+                flex-direction: column;
+                width: 150px;
+                height: 210px;
+                font-size: 20px;
+
+                label {
+
+                    width: 150px;
+                    height: 70px;
+                    line-height: 35px;
+                }
+            }
+
+            div#input-info-order {
+
+                display: flex;
+                flex-direction: column;
+                width: 500px;
+                height: 210px;
+
+                form {
+
+                    width: 500px;
+                    height: 70px;
+
+                    input {
+
+                        width: 500px;
+                        height: 30px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        div#notify-info-order {
+
+            margin-top: 20px;
+            width: 600px;
+            height: 60px;
+            font-size: 20px;
+            color: red;
+            display: none;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+    }
+
+    div#order-box {
+
+        height: calc(100% - 475px);
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        //background-color: crimson;
+        text-align: center;
+        font-size: 25px;
+        justify-content: center;
+        cursor: pointer;
+        //line-height: 40px;
+        //vertical-align: middle;
+        //display: inline;
+        
+        div#order-box-cost {
+    
+            width: 600px;
+            //height: 100%;
+            margin-right: 30px;
+            background-color: rgb(255, 145, 218);
+            padding-top: 13px;
+            //padding-bottom: 0px;
+        }
+    
+        div#order-box-oke {
+    
+            width: 150px;
+            //height: 100%;
+            padding-top: 13px;
+            background-color: red;
+            border: 1px solid rgba(0, 0, 0, 0);
+        }
+
+        div#order-box-oke:hover {
+    
+           
+            background-color: rgb(255, 174, 0);
+            border: 1px solid rgb(0, 0, 0);
+        }
+    
+    }
+    
+}

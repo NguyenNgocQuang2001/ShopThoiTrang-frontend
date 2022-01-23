@@ -11,7 +11,7 @@ function myCart() {
 
 function myOrder() {
 
-    window.location.pathname = '/profile/cart';
+    window.location.pathname = '/profile/order';
 }
 
 function myMess() {

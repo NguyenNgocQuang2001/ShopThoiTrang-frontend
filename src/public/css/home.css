@@ -195,6 +195,221 @@ body {
                   display: none; }
                 body div#container div#header-body div#show div#myAccount div#body-account div#info div#input-info div#fixinfo:hover {
                   background-color: red; }
+          body div#container div#header-body div#show div#myAccount div#my-Cart {
+            width: calc(100% - 10px);
+            height: calc(100% - 10px);
+            margin: 5px;
+            display: flex;
+            flex-direction: column; }
+            body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart {
+              width: calc(100% - 10px);
+              height: 475px;
+              margin: 5px;
+              display: flex;
+              flex-direction: column;
+              overflow: scroll; }
+              body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div#cart-notify {
+                text-align: center;
+                margin-top: 25px;
+                font-size: 30px;
+                display: none; }
+              body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div.neworder {
+                width: 100%;
+                height: 100px;
+                margin-top: 5px;
+                display: flex;
+                flex-direction: row; }
+                body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div.neworder div.order-oke {
+                  width: 40px;
+                  height: 100px;
+                  text-align: center; }
+                  body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div.neworder div.order-oke input {
+                    margin-top: 42px; }
+                body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div.neworder img {
+                  width: 100px;
+                  height: 100px; }
+                body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div.neworder div.order-pro {
+                  width: calc(100% - 220px);
+                  height: 60px;
+                  margin-left: 10px;
+                  font-size: 20px;
+                  display: block; }
+                  body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div.neworder div.order-pro div.name-pro {
+                    height: 40px;
+                    display: block; }
+                  body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div.neworder div.order-pro div.cost-pro {
+                    height: 40px;
+                    display: block;
+                    color: red; }
+                  body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div.neworder div.order-pro div.quan-pro {
+                    height: 20px;
+                    display: block; }
+                body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div.neworder div.id-pro {
+                  display: none; }
+                body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div.neworder div.path-pro {
+                  display: none; }
+                body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div.neworder div.delete-order {
+                  width: 60px;
+                  height: 100px;
+                  line-height: 80px;
+                  text-align: center; }
+                body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div.neworder div.delete-order:hover {
+                  color: red; }
+              body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div#info-order {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 30px;
+                display: none; }
+                body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div#info-order div#label-info-order {
+                  display: flex;
+                  flex-direction: column;
+                  width: 150px;
+                  height: 210px;
+                  font-size: 20px; }
+                  body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div#info-order div#label-info-order label {
+                    width: 150px;
+                    height: 70px;
+                    line-height: 35px; }
+                body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div#info-order div#input-info-order {
+                  display: flex;
+                  flex-direction: column;
+                  width: 500px;
+                  height: 210px; }
+                  body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div#info-order div#input-info-order form {
+                    width: 500px;
+                    height: 70px; }
+                    body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div#info-order div#input-info-order form input {
+                      width: 500px;
+                      height: 30px;
+                      font-size: 20px; }
+              body div#container div#header-body div#show div#myAccount div#my-Cart div#body-cart div#notify-info-order {
+                margin-top: 20px;
+                width: 600px;
+                height: 60px;
+                font-size: 20px;
+                color: red;
+                display: none;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto; }
+            body div#container div#header-body div#show div#myAccount div#my-Cart div#order-box {
+              height: calc(100% - 475px);
+              display: flex;
+              flex-direction: row;
+              width: 100%;
+              text-align: center;
+              font-size: 25px;
+              justify-content: center;
+              cursor: pointer; }
+              body div#container div#header-body div#show div#myAccount div#my-Cart div#order-box div#order-box-cost {
+                width: 600px;
+                margin-right: 30px;
+                background-color: #ff91da;
+                padding-top: 13px; }
+              body div#container div#header-body div#show div#myAccount div#my-Cart div#order-box div#order-box-oke {
+                width: 150px;
+                padding-top: 13px;
+                background-color: red;
+                border: 1px solid rgba(0, 0, 0, 0); }
+              body div#container div#header-body div#show div#myAccount div#my-Cart div#order-box div#order-box-oke:hover {
+                background-color: #ffae00;
+                border: 1px solid black; }
+          body div#container div#header-body div#show div#myAccount div#my-Order {
+            width: calc(100% - 10px);
+            height: calc(100% - 10px);
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+            margin-top: 5px; }
+            body div#container div#header-body div#show div#myAccount div#my-Order div#body-order {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              height: 480px;
+              overflow: scroll; }
+              body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div#order-notify {
+                text-align: center;
+                width: 100%;
+                height: 60px;
+                font-size: 30px;
+                margin-top: 20px;
+                display: none; }
+              body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div#information-detail {
+                margin-top: 10px;
+                height: 305px;
+                width: 100%;
+                font-size: 20px;
+                margin-bottom: 10px;
+                display: none; }
+                body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div#information-detail p {
+                  margin-top: 15px;
+                  margin-left: 10px; }
+                body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div#information-detail div#title-info {
+                  font-size: 35px;
+                  font-weight: bolder;
+                  text-align: center; }
+                body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div#information-detail div.id-order {
+                  width: 100%;
+                  height: 40px;
+                  margin-left: 10px; }
+                body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div#information-detail div.cost-order {
+                  width: 100%;
+                  height: 40px;
+                  margin-left: 10px; }
+                body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div#information-detail div.status-order {
+                  width: 100%;
+                  height: 20px;
+                  margin-left: 10px; }
+              body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail {
+                width: 100%;
+                height: 100px;
+                display: flex;
+                flex-direction: row;
+                margin-top: 10px; }
+                body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order img, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail img {
+                  width: 100px;
+                  height: 100px;
+                  margin-left: 10px; }
+                body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information-detail, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information-detail {
+                  width: calc(100% - 115px);
+                  height: 100px;
+                  font-size: 20px;
+                  margin-left: 5px;
+                  cursor: default; }
+                  body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information p, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information-detail p, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information p, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information-detail p {
+                    display: none; }
+                  body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information div.id-order, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information div.name-pro-detail, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information-detail div.id-order, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information-detail div.name-pro-detail, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information div.id-order, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information div.name-pro-detail, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information-detail div.id-order, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information-detail div.name-pro-detail {
+                    width: 100%;
+                    height: 40px; }
+                  body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information div.cost-order, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information div.cost-pro-detail, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information-detail div.cost-order, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information-detail div.cost-pro-detail, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information div.cost-order, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information div.cost-pro-detail, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information-detail div.cost-order, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information-detail div.cost-pro-detail {
+                    width: 100%;
+                    height: 40px; }
+                  body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information div.cost-pro-detail, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information-detail div.cost-pro-detail, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information div.cost-pro-detail, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information-detail div.cost-pro-detail {
+                    color: red; }
+                  body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information div.status-order, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information div.quan-pro-detail, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information-detail div.status-order, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order div.order-information-detail div.quan-pro-detail, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information div.status-order, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information div.quan-pro-detail, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information-detail div.status-order, body div#container div#header-body div#show div#myAccount div#my-Order div#body-order div.new-Order-detail div.order-information-detail div.quan-pro-detail {
+                    width: 100%;
+                    height: 20px; }
+            body div#container div#header-body div#show div#myAccount div#my-Order div#box-in-detail {
+              width: 100%;
+              display: none;
+              flex-direction: row; }
+              body div#container div#header-body div#show div#myAccount div#my-Order div#box-in-detail div#cancel, body div#container div#header-body div#show div#myAccount div#my-Order div#box-in-detail div#come-back {
+                text-align: center;
+                font-size: 25px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 300px;
+                height: 40px;
+                padding-top: 10px;
+                background-color: chartreuse;
+                cursor: pointer; }
+              body div#container div#header-body div#show div#myAccount div#my-Order div#box-in-detail div#cancel {
+                background-color: #1f70ce; }
+              body div#container div#header-body div#show div#myAccount div#my-Order div#box-in-detail div#cancel:hover {
+                background-color: red; }
+              body div#container div#header-body div#show div#myAccount div#my-Order div#box-in-detail div#come-back:hover {
+                background-color: #b48f8f; }
         body div#container div#header-body div#show div#logout {
           width: 100%;
           height: 100%;

@@ -1,6 +1,8 @@
 var imgchoice = 0;
 var allslide = 0;
 var allpro = 0;
+var imgFirst = "";
+var costpro = 0;
 
 function setDetailData() {
 
@@ -114,6 +116,7 @@ function toRight() {
 
 function setOrder(data) {
 
+    costpro = Math.floor(data.cost * (100 - data.sale) / 100);
     $('#quan-input > input').eq(0).val(1);
     $('#description').text(data.description);
     $('#sold').text(`Đã bán : ${data.sold}`);
@@ -155,11 +158,55 @@ async function getDetailData() {
     //console.log(data.data);
     allslide = data.data[0].pathimage.length;
     allpro = data.data[0].quantily;
+    imgFirst = data.data[0].pathimage[0];
     $('div#show1 > img').eq(0).prop("src", 'http://localhost:9090' + data.data[0].pathimage[0]);
     createSlide(data.data[0].pathimage);
     setSizeImg();
     imgSlideClick();
     setOrder(data.data[0]);
+}
+
+async function addProToCart() {
+
+    var quan = $('input#input-quan').val();
+    //console.log(quan);
+    var namepro = $('div#description').text();
+    var idpro = window.location.pathname.split('/')[2].split("_")[1]
+    var filter = {
+
+        product_id : idpro
+    }
+
+    var result = await getCart(filter);
+    //console.log(result.data);
+    if (result.data.length == 0) {
+
+        filter['quantily'] = quan;
+        filter['name_pro'] = namepro;
+        filter['cost_pro'] = costpro;
+        filter['pathimg_pro'] = imgFirst;
+        filter['path_pro'] = window.location.pathname;
+        // console.log(filter);
+        result = await addCart(filter);
+    } else {
+
+        var value = {
+
+            $set : {
+                
+                quantily : Number(quan) + Number(result.data[0].quantily)
+            }
+        }
+        var data = {
+
+            filter : filter,
+            value : value
+        }
+        
+        result = await updateCart(data);
+    }
+
+    window.location.pathname = '/product';
 }
 
 setSizeImgShow();

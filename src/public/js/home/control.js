@@ -91,6 +91,11 @@ function choiceSort(choice) {
     $('#search').val(search);
 }
 
+function goToCart() {
+
+    window.location.pathname = '/profile/cart';
+}
+
 function returnpro() {
 
     window.location.href = '/product';
